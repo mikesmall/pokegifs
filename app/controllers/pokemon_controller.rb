@@ -18,7 +18,7 @@ class PokemonController < ActionController::Base
 
     render json: {
       'name' => search_results["name"],
-      'types' => search_results["types"]
+      'types' => search_results["types"].first["type"]["name"]
     }
 
 
